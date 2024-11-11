@@ -1,3 +1,12 @@
 # Wordlist CLI
 
 Go beginner project
+
+```
+#install as cli
+go install github.com/RobinAxelsson/go_words@latest
+
+#uninstall
+rm $env:GOPATH\bin\go_words
+
+```
