@@ -9,8 +9,8 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": ".",
-            "args": ["remove", "123"]
+            "program": "src/.",
+            "args": ["rnum", "1"]
         }
     ]
 }
