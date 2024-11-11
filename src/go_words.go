@@ -1,4 +1,4 @@
-package main
+package go_words
 
 import (
 	"fmt"
@@ -10,14 +10,14 @@ import (
 var filename string = "wordlist.txt"
 var actions []string = []string{"add", "list", "remove", "rnum"}
 
-func main() {
+func Run(osArgs []string) {
 
 	action := ""
 
-	if len(os.Args) < 2 {
+	if len(osArgs) < 2 {
 		fmt.Printf("wordlist <action>\nvalid actions: %s\n", actions)
 	} else {
-		action = os.Args[1]
+		action = osArgs[1]
 	}
 
 	if action != "" && !contains(actions, action) {
@@ -27,7 +27,7 @@ func main() {
 
 	if action != "" {
 		words := getWords()
-		actionArgs := os.Args[2:]
+		actionArgs := osArgs[2:]
 
 		if action == "add" {
 			added := add(actionArgs)

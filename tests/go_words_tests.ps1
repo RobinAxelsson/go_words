@@ -1,53 +1,51 @@
 #!/usr/bin/env pwsh
 
-cd src
 go build .
-.\wordlist.exe
+.\go_words.exe
 Write-Output ---
 
-.\wordlist.exe list
+.\go_words.exe list
 Write-Output ---
 
-.\wordlist.exe add
+.\go_words.exe add
 Write-Output ---
 
-.\wordlist.exe rnum
+.\go_words.exe rnum
 Write-Output ---
 
-.\wordlist.exe remove
+.\go_words.exe remove
 Write-Output ---
 
-.\wordlist.exe add test
+.\go_words.exe add test
 Write-Output ---
 
-.\wordlist.exe add horse stable
+.\go_words.exe add horse stable
 Write-Output ---
 
-.\wordlist.exe add dog
+.\go_words.exe add dog
 Write-Output ---
 
-.\wordlist.exe remove horse stable
+.\go_words.exe remove horse stable
 Write-Output ---
 
-.\wordlist.exe rnum 2
+.\go_words.exe rnum 2
 Write-Output ---
 
-.\wordlist.exe rnum 1
+.\go_words.exe rnum 1
 Write-Output ---
 
-.\wordlist.exe rnum 1
+.\go_words.exe rnum 1
 Write-Output ---
 
-.\wordlist.exe rnum 99
+.\go_words.exe rnum 99
 Write-Output ---
 
-.\wordlist.exe list
+.\go_words.exe list
 Write-Output ---
 
-.\wordlist.exe remove not here
+.\go_words.exe remove not here
 Write-Output ---
 
 #clean up
 Remove-Item wordlist.txt
-Remove-Item wordlist.exe
-cd ..
+Remove-Item go_words.exe
